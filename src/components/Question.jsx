@@ -4,8 +4,8 @@ import { questionGeek } from '../Questionario';
 import { ButtonStyle, DivForm, FormStyle, RadioStyle, Titulo } from '../styles/CardQuestion'
 
 export default class Question extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             numberQuestion: 0,
             question: {
@@ -22,7 +22,7 @@ export default class Question extends Component {
     }
 
     componentDidMount() {
-        const currentQuizData = questionGeek[this.state.numberQuestion]
+        const currentQuizData = this.props.quiz[this.state.numberQuestion]
 
         this.setState({
             question: {
@@ -31,7 +31,7 @@ export default class Question extends Component {
                 b: currentQuizData.b,
                 c: currentQuizData.c,
                 d: currentQuizData.d,
-                correct: currentQuizData.corrrect
+                correct: currentQuizData.correct
             }
         })
     }

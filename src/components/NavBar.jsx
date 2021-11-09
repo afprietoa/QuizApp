@@ -7,7 +7,9 @@ export default class NavBar extends Component {
         return (
             <Nav>
                 <Link to="/" className="nav-link">Home</Link>
-                <Link to="/question" className="nav-link">Cuestionario friki</Link>
+                <Link to="/geek" className="nav-link">Quiz Geek</Link>
+                <Link to="/games" className="nav-link">Quiz Games</Link>
+                <Link to="/magic" className="nav-link">Quiz Magia</Link>
                 <Link to="/about" className="nav-link">Sobre el formulario</Link>
             </Nav>
         )
